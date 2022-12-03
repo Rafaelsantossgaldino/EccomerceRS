@@ -23,6 +23,8 @@ gem "jbuilder"
 
 gem "devise"
 
+gem 'simple_form'
+
 gem "redis", "~> 4.0"
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
