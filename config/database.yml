@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password: Dell1111
+
+
+development:
+  <<: *default
+  database: EccomerceRS_development
+
+
+test:
+  <<: *default
+  database: EccomerceRS_test
+
+
+production:
+  <<: *default
+  database: EccomerceRS_production
+  username: EccomerceRS
+  password: <%= ENV["ECCOMERCERS_DATABASE_PASSWORD"] %>
